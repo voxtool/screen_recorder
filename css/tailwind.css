@@ -1,0 +1,67 @@
+:root {
+--record: #AE1100;
+--bg: #EBECF0;
+--shadow: #BABECC;
+--white: #FFF;
+--text: #61677C;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+header {
+    max-width: 90vw;
+    margin: auto;
+    border-radius:320px;
+    box-shadow: -5px -5px 20px var(--white),  5px 5px 20px var(--shadow);
+}
+
+.feedback {
+    border: 0;
+    outline: 0;
+    border-radius: 16px;
+    background-color: var(--bg);
+    box-shadow: inset 1px 1px 2px var(--shadow), inset -1px -1px 2px var(--white);
+}
+
+.start-recording,
+.stop-recording,
+.save-recording {
+    border: 0;
+    outline: 0;
+    border-radius: 320px;
+    background-color: var(--bg);
+    box-shadow: -5px -5px 20px var(--white),  5px 5px 20px var(--shadow);
+    transition: all 0.2s ease-in-out;
+}
+
+.stop-recording {
+    color: var(--record);
+}
+
+.start-recording:hover,
+.stop-recording:hover,
+.save-recording:hover {
+    box-shadow: -2px -2px 5px var(--white), 2px 2px 5px var(--shadow);
+}
+
+.start-recording:active,
+.stop-recording:active {
+    box-shadow: inset 1px 1px 2px var(--shadow), inset -1px -1px 2px var(--white);
+}
+
+.save-recording {
+    max-width: 30vw;
+    margin: auto;
+}
+
+.start-recording:disabled,
+.stop-recording:disabled {
+    opacity: 0.5;
+}
+
+@tailwind base;
+@tailwind component;
+@tailwind utilities;

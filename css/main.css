@@ -19,21 +19,24 @@ header {
 }
 
 .feedback {
-  max-height: 75vh;
+  height: 75vh;
   border: 0;
   outline: 0;
-  border-radius: 16px;
+  border-radius: 8px;
   background-color: var(--bg);
   box-shadow: inset 1px 1px 2px var(--shadow), inset -1px -1px 2px var(--white);
 }
 
 .start-recording,
 .stop-recording,
-.save-recording {
+.save-recording,
+.microphone,
+.device {
   border: 0;
   outline: 0;
   border-radius: 320px;
   background-color: var(--bg);
+  cursor: pointer;
   box-shadow: -5px -5px 20px var(--white),  5px 5px 20px var(--shadow);
   transition: all 0.2s ease-in-out;
 }
@@ -61,6 +64,22 @@ header {
 .start-recording:disabled,
 .stop-recording:disabled {
   opacity: 0.5;
+}
+
+#mic,
+#system {
+  display: none;
+}
+
+#mic:checked + .microphone,
+#system:checked + .device {
+  box-shadow: inset 1px 1px 2px var(--shadow), inset -1px -1px 2px var(--white);
+}
+
+@media (min-width: 1024px) {
+  .feedback {
+    height: 60vh
+  }
 }
 
 /*! tailwindcss v2.2.16 | MIT License | https://tailwindcss.com */

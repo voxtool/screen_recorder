@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screen Recorder</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./favicon.png">
     <script src="./js/main.js"></script>
 </head>
 <body>
     <header>
-        <div class="container flex justify-center items-center py-4 mt-4">
-            <h1 class="text-2xl font-bold uppercase">Screen Recorder</h1>
+        <div class="container flex justify-center items-center py-2 mt-4 md:py-4">
+            <h1 class="text-xl font-bold uppercase">Screen Recorder</h1>
         </div>
     </header>
     <main class="overflow-hidden">
-        <div class="container mx-auto py-8 px-4">
-            <video src="" autoplay class="feedback w-auto h-screen mx-auto mb-4 p-1"></video>
+        <div class="container flex justify-center items-center text-center mx-auto py-8 px-4 mt-3 md:mt-6">
+            <input type="checkbox" id="mic" checked name="microphonesound">
+            <label class="microphone mx-2 md:mx-4 flex-1 px-4 py-3 md:p-4 uppercase text-sm md:text-lg font-bold" for="mic">Microphone <span class="mic-indicator">On</span></label>
+            <input type="checkbox" id="system" name="systemsound">
+            <label class="device mx-2 md:mx-4 flex-1 px-4 py-3 md:p-4 uppercase text-sm md:text-lg font-bold" for="system">Sound <span class="system-indicator">On</span></label>
+        </div>
+        <div class="container mx-auto py-2 md:py-8 px-2 md:px-4">
+            <video src="" autoplay class="feedback w-auto mx-auto mb-4 p-1"></video>
             <div class="flex justify-center items-center -mx-4">
                 <button class="start-recording mx-2 md:mx-4 flex-1 px-4 py-3 md:p-4 uppercase text-sm md:text-lg font-bold">Start Recording</button>
                 <button class="stop-recording mx-2 md:mx-4 flex-1 px-4 py-3 md:p-4 uppercase text-sm md:text-lg font-bold" disabled>Stop Recording</button>
